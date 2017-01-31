@@ -2,10 +2,10 @@ import json
 
 
 def load_data(filepath):
-    data = []
+    data_from_json_file = []
     with open(filepath) as data_file:
-        data = json.load(data_file)
-    return data
+        data_from_json_file = json.load(data_file)
+    return data_from_json_file
 
 
 def pretty_print_json(data):
@@ -15,4 +15,4 @@ def pretty_print_json(data):
 if __name__ == '__main__':
     path_to_file = input('Input path to the file = ')
     json_info = load_data(path_to_file)
-    pretty_print_for_json(json_info)
+    pretty_print_json(json_info)
